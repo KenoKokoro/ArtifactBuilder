@@ -1,0 +1,19 @@
+{
+  "name": "jimmy/artifact-builder",
+  "description": "Used for creating laravel artifacts for deployment using jenkins and ansible",
+  "authors": [
+    {
+      "name": "Jimmy",
+      "email": "jimmy@kenshin.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "src/helpers/methods.php",
+      "src/helpers/steps.php"
+    ],
+    "psr-4": {
+      "Artifacts\\": "src"
+    }
+  }
+}
