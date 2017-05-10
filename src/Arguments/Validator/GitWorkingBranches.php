@@ -24,6 +24,7 @@ class GitWorkingBranches extends Argument
 
     public function validate()
     {
+        // TODO: Add more validation. Existance of branches, etc.   
         return $this->validateStringFormat();
     }
 
