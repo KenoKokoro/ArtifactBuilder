@@ -9,7 +9,7 @@
   ],
   "autoload": {
     "files": [
-      "src/helpers/methods.php",
+      "src/helpers/functions.php",
       "src/helpers/steps.php"
     ],
     "psr-4": {

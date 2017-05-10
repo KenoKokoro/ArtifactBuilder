@@ -21,3 +21,14 @@ if ( ! function_exists('compilableExtensions')) {
         ];
     }
 }
+
+if ( ! function_exists('instance')) {
+    function instance($className, ...$argv)
+    {
+        if ( ! class_exists($className)) {
+            throw new Exception("Class {$className} not found.");
+        }
+
+        return new $className(...$argv);
+    }
+}

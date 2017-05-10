@@ -12,7 +12,8 @@ class Factory
     {
         $gitLocation = "--work-tree=" . workspace() . " --git-dir=" . workspace() . "/.git";
 
-        return Executor::runAndReturn("git {$gitLocation} diff-tree -r --name-only --no-commit-id " . Git::$dev);
+        return Executor::runAndReturn("git {$gitLocation} diff-tree -r --name-only --no-commit-id "
+                                      . Git::$pushedBranch . " " . Git::$existingBranch);
     }
 
     public static function composerInstall()

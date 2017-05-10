@@ -12,7 +12,9 @@ class Git
 
     protected $difference;
 
-    static public $dev = 'dev';
+    static public $pushedBranch;
+
+    static public $existingBranch;
 
     public function __construct(Workspace $workspace)
     {
