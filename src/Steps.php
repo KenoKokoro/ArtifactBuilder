@@ -35,9 +35,9 @@ class Steps
             Composer::class,
             NodeModules::class,
             CompileFrontend::class,
-            Database::class,
+            //Database::class,
             Behat::class,
-            //            PhpUnit::class,
+            //PhpUnit::class,
         ];
     }
 

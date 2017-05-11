@@ -4,8 +4,6 @@
 namespace Artifacts\Commands;
 
 
-use Artifacts\Steps\BaseStep;
-
 class Executor
 {
     public static function run($cmd, $print = true)
@@ -18,7 +16,7 @@ class Executor
 
         if ($return) {
             echo ($print) ?: @implode("\n", $output);
-            die("\n\nExit code is not 0. Artifact is not created.");
+            die("\n\nExit code is not 0. Aborting.");
         }
     }
 

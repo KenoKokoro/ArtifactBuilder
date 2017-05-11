@@ -4,7 +4,7 @@ use Artifacts\Arguments\Validator\Validation;
 use Artifacts\Builder;
 use Artifacts\Steps;
 
-include_once 'vendor/autoload.php';
+include_once __DIR__ . "/vendor/autoload.php";
 
 $bootstraper = new Bootstrap($argv, new Validation);
 $bootstraper->validateInputArguments();

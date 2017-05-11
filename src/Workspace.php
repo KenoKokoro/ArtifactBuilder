@@ -28,7 +28,8 @@ class Workspace
             return true;
         }
 
-        throw new InvalidArgumentException("{$path} does not exists, or .git folder is not found there.");
+        echo "{$path} does not exists, or .git folder is not found there.";
+        die();
     }
 
     public function __toString()
