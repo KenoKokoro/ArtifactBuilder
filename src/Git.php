@@ -26,7 +26,6 @@ class Git
     public function diffHeads()
     {
         $this->difference = CMD::gitDiffTree();
-        die($this->difference);
     }
 
     public function workspace()
