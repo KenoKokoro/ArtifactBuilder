@@ -28,8 +28,8 @@ class Workspace
             return true;
         }
 
-        echo "{$path} does not exists, or .git folder is not found there.";
-        die();
+        echo "\n{$path} does not exists, or .git folder is not found there.\n";
+        exit(1);
     }
 
     public function __toString()
