@@ -1,3 +1,3 @@
 #!/bin/bash
 
-php $PWD/entry.php $@
+php $(dirname $(readlink -f $0))/entry.php $@
