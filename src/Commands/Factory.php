@@ -12,8 +12,7 @@ class Factory
     {
         $gitLocation = "--work-tree=" . workspace() . " --git-dir=" . workspace() . "/.git";
 
-        return Executor::runAndReturn("git {$gitLocation} diff-tree -r --name-only --no-commit-id "
-                                      . Git::$pushedBranch . " " . Git::$existingBranch);
+        return Executor::runAndReturn("git {$gitLocation} diff-tree -r --name-only --no-commit-id " . Git::$pushedBranch . " " . Git::$existingBranch);
     }
 
     public static function composerInstall()
@@ -39,6 +38,11 @@ class Factory
     public static function migrate()
     {
         Executor::run("php " . workspace() . "/artisan migrate");
+    }
+
+    public static function migrateAndSeed()
+    {
+        Executor::run("php " . workspace() . "/artisan migrate --seed");
     }
 
     public static function behat()

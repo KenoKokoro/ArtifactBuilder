@@ -11,7 +11,7 @@ $bootstraper->validateInputArguments();
 $bootstraper->setEnvironment();
 
 
-// TODO: Steps config
+// TODO: Steps config as arguments
 //$steps = initialSteps($argv, $argc);
 
 return (new Builder($argv, new Steps()))->startBuildingArtifact();

@@ -12,13 +12,6 @@ class Database extends BaseStep
 
     protected function start()
     {
-        if ($this->contains(self::FOLDER)) {
-            $this->migrate();
-        }
-    }
-
-    protected function migrate()
-    {
-        CMD::migrate();
+        CMD::migrateAndSeed();
     }
 }
