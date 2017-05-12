@@ -59,4 +59,9 @@ class Factory
     {
         Executor::run("cd " . workspace() . " && vendor/bin/phpunit");
     }
+
+    public static function keyGenerate()
+    {
+        Executor::run("php " . workspace() . "/artisan key:generate");
+    }
 }

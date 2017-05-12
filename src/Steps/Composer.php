@@ -55,5 +55,6 @@ class Composer extends BaseStep
     private function dumpAutoload()
     {
         CMD::dumpAutoload();
+        CMD::keyGenerate();
     }
 }
