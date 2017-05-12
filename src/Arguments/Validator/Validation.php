@@ -11,8 +11,8 @@ class Validation
     public function validate(Argument $argument)
     {
         if ( ! $this->passes($argument)) {
-            echo "Incorrect value for " . get_class($argument) . "\n{$argument->value()} Given";
-            die();
+            echo "\nIncorrect value for " . get_class($argument) . "\n{$argument->value()} Given\n";
+            exit(1);
         }
     }
 

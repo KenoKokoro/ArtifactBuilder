@@ -16,7 +16,8 @@ class Executor
 
         if ($return) {
             echo ($print) ?: @implode("\n", $output);
-            die("\n\nExit code is not 0. Aborting.");
+            echo "\n\nExit code is not 0. Aborting.\n";
+            exit(1);
         }
     }
 
