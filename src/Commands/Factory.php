@@ -40,9 +40,9 @@ class Factory
         Executor::run("php " . workspace() . "/artisan migrate");
     }
 
-    public static function migrateAndSeed()
+    public static function refreshDatabase()
     {
-        Executor::run("php " . workspace() . "/artisan migrate --seed");
+        Executor::run("php " . workspace() . "/artisan migrate:refresh --seed");
     }
 
     public static function behat()

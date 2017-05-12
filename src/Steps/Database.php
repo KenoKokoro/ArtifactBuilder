@@ -12,6 +12,6 @@ class Database extends BaseStep
 
     protected function start()
     {
-        CMD::migrateAndSeed();
+        CMD::refreshDatabase();
     }
 }

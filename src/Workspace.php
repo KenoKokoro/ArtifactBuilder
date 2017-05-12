@@ -4,8 +4,6 @@
 namespace Artifacts;
 
 
-use InvalidArgumentException;
-
 class Workspace
 {
     private $path;
