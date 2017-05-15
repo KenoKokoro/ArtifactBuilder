@@ -40,6 +40,7 @@ class Composer extends BaseStep
     {
         $this->install();
         $this->update();
+        $this->dumpAutoload();
     }
 
     protected function install()
