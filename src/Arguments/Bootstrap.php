@@ -7,6 +7,7 @@ namespace Artifacts\Arguments;
 use Artifacts\Arguments\Validator\GitWorkingBranches;
 use Artifacts\Arguments\Validator\WorkingDirectory;
 use Artifacts\Arguments\Validator\Validation;
+use Artifacts\Exceptions\InvalidArgumentsNumber;
 use Artifacts\Git;
 use Artifacts\Steps\BaseStep;
 use Artifacts\Workspace;
@@ -39,6 +40,10 @@ class Bootstrap
 
     public function validateInputArguments()
     {
+        if (count($this->argv) != 2) {
+            throw new InvalidArgumentsNumber;
+        }
+
         foreach ($this->argv as $index => $value) {
             $instance = $this->argumentInstance($index, $value);
 
@@ -51,7 +56,7 @@ class Bootstrap
         }
     }
 
-    protected function argumentInstance($index, $value)
+    protected function argumentInstance(int $index, $value)
     {
         $mappings = $this->argumentMaping();
         if (isset($mappings[$index])) {
