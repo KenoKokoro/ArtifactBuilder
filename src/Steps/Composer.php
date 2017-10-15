@@ -38,6 +38,9 @@ class Composer extends BaseStep
 
     protected function installToLatest()
     {
+        if ( ! $this->contains(self::JSON_FILE)) {
+            return;
+        }
         $this->install();
         $this->update();
         $this->dumpAutoload();

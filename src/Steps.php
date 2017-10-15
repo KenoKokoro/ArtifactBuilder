@@ -14,9 +14,19 @@ use Artifacts\Steps\PhpUnit;
 
 class Steps
 {
+    protected $steps = [];
+
+    public function __construct(array $steps = null)
+    {
+        if (is_null($steps)) {
+            $steps = $this->defaultSteps();
+        }
+        $this->steps = $steps;
+    }
+
     public function execute()
     {
-        foreach ($this->steps() as $step) {
+        foreach ($this->steps as $step) {
             /** @var BaseStep $instance */
             $instance = (new $step);
             // TODO: Implement before hooks
@@ -29,7 +39,7 @@ class Steps
         return true;
     }
 
-    protected function steps()
+    protected function defaultSteps()
     {
         return [
             Composer::class,
