@@ -7,13 +7,19 @@
       "email": "jimmy@kenshin.com"
     }
   ],
+  "require-dev": {
+    "php": ">=7.0.0",
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "~5.7|6.0"
+  },
   "autoload": {
     "files": [
       "src/helpers/functions.php",
       "src/helpers/steps.php"
     ],
     "psr-4": {
-      "Artifacts\\": "src"
+      "Artifacts\\": "src",
+      "Tests\\": "tests"
     }
   }
 }
